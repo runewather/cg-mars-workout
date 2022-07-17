@@ -2,6 +2,7 @@ import type { GetStaticPaths, NextPage } from "next";
 import Head from "next/head";
 
 import { Layout } from "../../components/Layout";
+import { Video } from "../../components/Video";
 
 import data from "../../data/workouts.json";
 
@@ -23,6 +24,8 @@ export async function getStaticProps({ params }: any) {
 }
 
 const Workout: NextPage = ({ workout }: any) => {
+  console.log(workout);
+
   return (
     <>
       <Head>
@@ -34,7 +37,13 @@ const Workout: NextPage = ({ workout }: any) => {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </Head>
-      <Layout></Layout>
+      <Layout>
+        <Video
+          url={workout.media}
+          title={workout.title}
+          description={workout.description}
+        />
+      </Layout>
     </>
   );
 };
