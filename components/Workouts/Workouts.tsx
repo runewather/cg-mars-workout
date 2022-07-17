@@ -25,6 +25,7 @@ const Workouts: React.FC = () => {
           title={d.title}
           description={d.description}
           thumbnail={d.thumbnail}
+          duration={d.duration}
         />
       ))}
     </WorkoutsWrapper>

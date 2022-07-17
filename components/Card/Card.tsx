@@ -42,6 +42,14 @@ const CardTitle = styled(Box)({
   marginTop: "16px",
 });
 
+const CardDuration = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: "16px",
+  marginBottom: "8px",
+});
+
 const CustomButtom = styled(Button)({
   color: "#C8102E",
   width: "200px",
@@ -70,7 +78,7 @@ const Card: React.FC<Props> = ({
           style={{ borderRadius: "10px" }}
         />
       </ImageBox>
-      <Box height="200px">
+      <Box height="230px">
         <CardTitle>
           <Typography variant="h5" textAlign="center">
             {title}
@@ -81,8 +89,19 @@ const Card: React.FC<Props> = ({
             {description}
           </Typography>
         </Box>
+        <CardDuration>
+          <Typography
+            variant="subtitle1"
+            style={{ textAlign: "center", fontWeight: "bold" }}
+          >
+            Duration
+          </Typography>
+          <Typography variant="subtitle1" style={{ textAlign: "center" }}>
+            {`: ${duration}min`}
+          </Typography>
+        </CardDuration>
       </Box>
-      <Box mt={2}>
+      <Box mt={1}>
         <Link href="/">
           <CustomButtom variant="outlined">Watch class</CustomButtom>
         </Link>
