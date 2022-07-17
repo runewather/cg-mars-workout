@@ -26,15 +26,18 @@ const ImageBox = styled(Box)({
 
 const Navbar: React.FC = () => {
   return (
-    <CustomNavbar position="fixed">
-      <NavbarContainer>
-        <Link href="/">
-          <ImageBox>
-            <Image src="/logo.svg" alt="Camp gladiators logo" layout="fill" />
-          </ImageBox>
-        </Link>
-      </NavbarContainer>
-    </CustomNavbar>
+    <>
+      <CustomNavbar position="fixed">
+        <NavbarContainer>
+          <Link href="/">
+            <ImageBox>
+              <Image src="/logo.svg" alt="Camp gladiators logo" layout="fill" />
+            </ImageBox>
+          </Link>
+        </NavbarContainer>
+      </CustomNavbar>
+      <Box mb={"80px"} />
+    </>
   );
 };
 
