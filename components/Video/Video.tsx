@@ -3,15 +3,15 @@ import { styled } from "@mui/system";
 
 interface Props {
   url?: string | "";
-  title: string | "";
-  description: string | "";
+  title?: string | "";
+  description?: string | "";
 }
 
 const VideoContainer = styled(Container)({
   position: "relative",
   width: "100%",
   paddingTop: "16px",
-  paddingBottom: "16px",
+  paddingBottom: "64px",
 });
 
 const Video: React.FC<Props> = ({ url, title, description }) => {

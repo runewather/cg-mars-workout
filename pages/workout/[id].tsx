@@ -4,7 +4,13 @@ import Head from "next/head";
 import { Layout } from "../../components/Layout";
 import { Video } from "../../components/Video";
 
+import { Workout as IWorkout } from "../../interfaces/workout";
+
 import data from "../../data/workouts.json";
+
+interface Props {
+  workout: IWorkout;
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
@@ -14,7 +20,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }: any) {
-  const workout = data.find((w) => w.id === params.id);
+  const workout: IWorkout = data.find(
+    (w: IWorkout) => w.id === params.id
+  ) as IWorkout;
 
   return {
     props: {
@@ -23,9 +31,7 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
-const Workout: NextPage = ({ workout }: any) => {
-  console.log(workout);
-
+const Workout: NextPage<Props> = ({ workout }) => {
   return (
     <>
       <Head>
