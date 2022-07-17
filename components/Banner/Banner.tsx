@@ -12,15 +12,16 @@ const BannerBox = styled(Box)({
 const BannerContentContainer = styled(Container)({
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   height: "100%",
   zIndex: 999,
 });
 
 const BannerTitle = styled(Typography)({
   color: "white",
-  fontSize: "2.75rem",
+  fontSize: "2.25rem",
   fontWeight: "bold",
+  width: "75%",
 });
 
 const Banner: React.FC = () => {
