@@ -59,7 +59,7 @@ const CustomButtom = styled(Button)({
   borderColor: "#c8102e",
   "&:Hover": {
     borderColor: "#c8102e",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "transparent",
   },
 });
 
