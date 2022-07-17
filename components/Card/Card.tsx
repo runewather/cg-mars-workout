@@ -34,6 +34,14 @@ const ImageBox = styled(Box)(({ theme }) => ({
   },
 }));
 
+const CardTitle = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "65px",
+  marginTop: "16px",
+});
+
 const CustomButtom = styled(Button)({
   color: "#C8102E",
   width: "200px",
@@ -63,11 +71,11 @@ const Card: React.FC<Props> = ({
         />
       </ImageBox>
       <Box height="200px">
-        <Box mt={3}>
+        <CardTitle>
           <Typography variant="h5" textAlign="center">
             {title}
           </Typography>
-        </Box>
+        </CardTitle>
         <Box mt={3}>
           <Typography variant="body1" style={{ textAlign: "center" }}>
             {description}
