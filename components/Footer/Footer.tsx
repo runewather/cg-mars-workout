@@ -1,4 +1,4 @@
-import { Container, AppBar, Box } from "@mui/material";
+import { Container, AppBar, Box, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import Image from "next/image";
@@ -10,8 +10,36 @@ const FooterWrapper = styled(Box)({
   backgroundColor: "#333333",
 });
 
+const FooterContent = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100%",
+});
+
+const ImageBox = styled(Box)({
+  width: "190px",
+  height: "40px",
+  position: "relative",
+  cursor: "pointer",
+});
+
 const Footer: React.FC = () => {
-  return <FooterWrapper></FooterWrapper>;
+  return (
+    <FooterWrapper>
+      <FooterContent>
+        <Link href="/">
+          <ImageBox>
+            <Image
+              src="/logo-white.svg"
+              alt="Camp gladiators logo"
+              layout="fill"
+            />
+          </ImageBox>
+        </Link>
+      </FooterContent>
+    </FooterWrapper>
+  );
 };
 
 export default Footer;
