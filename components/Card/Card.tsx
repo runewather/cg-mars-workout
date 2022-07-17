@@ -19,7 +19,7 @@ const CardBox = styled(Box)({
   padding: "16px",
 });
 
-const ImageBox = styled(Box)({
+const ImageBox = styled(Box)(({ theme }) => ({
   width: "350px",
   height: "400px",
   position: "relative",
@@ -29,7 +29,10 @@ const ImageBox = styled(Box)({
   "&:hover": {
     filter: "brightness(100%)",
   },
-});
+  [theme.breakpoints.down("sm")]: {
+    filter: "brightness(100%)",
+  },
+}));
 
 const CustomButtom = styled(Button)({
   color: "#C8102E",
