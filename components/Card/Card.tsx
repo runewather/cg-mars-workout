@@ -104,7 +104,7 @@ const Card: React.FC<Props> = ({
         </CardDuration>
       </Box>
       <Box mt={1}>
-        <Link href={`/workout/${id}`}>
+        <Link data-testid="card-link" href={`/workout/${id}`}>
           <CustomButtom variant="outlined">Watch class</CustomButtom>
         </Link>
       </Box>

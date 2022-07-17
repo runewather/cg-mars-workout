@@ -6,6 +6,6 @@ export interface Workout {
   impactTag?: string | "";
   thumbnail?: string | "";
   media?: string | "";
-  duration?: string | number | "";
+  duration?: number;
   trainerId?: string | number | 0;
 }
