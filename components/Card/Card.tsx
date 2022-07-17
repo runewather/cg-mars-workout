@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
+  id?: string | number | 0;
   title?: string | "";
   description?: string | "";
   thumbnail?: string | "";
@@ -63,6 +64,7 @@ const CustomButtom = styled(Button)({
 });
 
 const Card: React.FC<Props> = ({
+  id,
   title,
   description,
   thumbnail = "",
@@ -102,7 +104,7 @@ const Card: React.FC<Props> = ({
         </CardDuration>
       </Box>
       <Box mt={1}>
-        <Link href="/">
+        <Link href={`/workout/${id}`}>
           <CustomButtom variant="outlined">Watch class</CustomButtom>
         </Link>
       </Box>

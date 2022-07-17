@@ -22,6 +22,7 @@ const Workouts: React.FC = () => {
       {data.map((d) => (
         <Card
           key={d.title}
+          id={d.id}
           title={d.title}
           description={d.description}
           thumbnail={d.thumbnail}
