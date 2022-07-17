@@ -1,4 +1,4 @@
-import { Container, AppBar, Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 import Image from "next/image";
@@ -18,8 +18,8 @@ const FooterContent = styled(Box)({
 });
 
 const ImageBox = styled(Box)({
-  width: "190px",
-  height: "40px",
+  width: "60px",
+  height: "60px",
   position: "relative",
   cursor: "pointer",
 });

@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import { Layout } from "../components/Layout";
 import { Banner } from "../components/Banner";
+import { Workouts } from "../components/Workouts";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
         <Banner />
+        <Workouts />
       </Layout>
     </div>
   );

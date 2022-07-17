@@ -1,0 +1,83 @@
+import { Box, Typography, Button } from "@mui/material";
+import { styled } from "@mui/system";
+
+import Image from "next/image";
+import Link from "next/link";
+
+interface Props {
+  title?: string | "";
+  description?: string | "";
+  thumbnail?: string | "";
+  duration?: number | 0;
+}
+
+const CardBox = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  width: "350px",
+  padding: "16px",
+});
+
+const ImageBox = styled(Box)({
+  width: "350px",
+  height: "400px",
+  position: "relative",
+  borderRadius: "10px",
+  filter: "brightness(85%)",
+  transition: "1s all",
+  "&:hover": {
+    filter: "brightness(100%)",
+  },
+});
+
+const CustomButtom = styled(Button)({
+  color: "#C8102E",
+  width: "200px",
+  height: "40px",
+  borderRadius: "30px",
+  borderColor: "#c8102e",
+  "&:Hover": {
+    borderColor: "#c8102e",
+    backgroundColor: "#FFFFFF",
+  },
+});
+
+const Card: React.FC<Props> = ({
+  title,
+  description,
+  thumbnail = "",
+  duration,
+}) => {
+  return (
+    <CardBox>
+      <ImageBox>
+        <Image
+          src={thumbnail}
+          alt={`${title} thumbnail`}
+          layout="fill"
+          style={{ borderRadius: "10px" }}
+        />
+      </ImageBox>
+      <Box height="200px">
+        <Box mt={3}>
+          <Typography variant="h5" textAlign="center">
+            {title}
+          </Typography>
+        </Box>
+        <Box mt={3}>
+          <Typography variant="body1" style={{ textAlign: "center" }}>
+            {description}
+          </Typography>
+        </Box>
+      </Box>
+      <Box mt={2}>
+        <Link href="/">
+          <CustomButtom variant="outlined">Watch class</CustomButtom>
+        </Link>
+      </Box>
+    </CardBox>
+  );
+};
+
+export default Card;
