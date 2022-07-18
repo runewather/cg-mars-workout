@@ -3,8 +3,6 @@ import { render, screen } from "@testing-library/react";
 
 import { Workout } from "../interfaces/workout";
 
-import data from "../data/workouts.json";
-
 import { Card } from "../components/Card";
 
 const workout: Workout = {
